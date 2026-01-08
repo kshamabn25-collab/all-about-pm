@@ -16,7 +16,13 @@
   <header>
     <h1>All About PM</h1>
     <nav>
-      <a href="#project" class="tab-link active" onclick="openTab(event, 'project')">
+      <a href="#home" class="tab-link active" onclick="openTab(event, 'home')">
+        <i class="fas fa-home"></i> Home
+      </a>
+      <a href="#about" class="tab-link" onclick="openTab(event, 'about')">
+        <i class="fas fa-user"></i> About
+      </a>
+      <a href="#project" class="tab-link" onclick="openTab(event, 'project')">
         <i class="fas fa-tasks"></i> Project Management
       </a>
       <a href="#product" class="tab-link" onclick="openTab(event, 'product')">
@@ -29,12 +35,29 @@
   </header>
 
   <main>
-    <div id="project" class="tab-content" style="display:block;">
+    <!-- Home Tab -->
+    <div id="home" class="tab-content" style="display:block;">
+      <h2>Welcome to All About PM</h2>
+      <p>This is your go-to resource for Project Management, Product Management, and PMO Governance. Explore tabs to read articles, learn best practices, and get professional insights.</p>
+      <p>Stay tuned for new posts and tips for managing projects and products effectively!</p>
+    </div>
+
+    <!-- About Tab -->
+    <div id="about" class="tab-content">
+      <iframe src="posts/about.html" frameborder="0" class="article-frame"></iframe>
+    </div>
+
+    <!-- Project Management -->
+    <div id="project" class="tab-content">
       <iframe src="posts/project-management.html" frameborder="0" class="article-frame"></iframe>
     </div>
+
+    <!-- Product Management -->
     <div id="product" class="tab-content">
       <iframe src="posts/product-management.html" frameborder="0" class="article-frame"></iframe>
     </div>
+
+    <!-- PMO Governance -->
     <div id="pmo" class="tab-content">
       <iframe src="posts/pmo-governance.html" frameborder="0" class="article-frame"></iframe>
     </div>
