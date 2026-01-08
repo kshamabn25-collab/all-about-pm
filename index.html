@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All About PM</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>All About PM</h1>
+    <nav>
+      <a href="#project" class="tab-link active" onclick="openTab(event, 'project')">
+        <i class="fas fa-tasks"></i> Project Management
+      </a>
+      <a href="#product" class="tab-link" onclick="openTab(event, 'product')">
+        <i class="fas fa-box-open"></i> Product Management
+      </a>
+      <a href="#pmo" class="tab-link" onclick="openTab(event, 'pmo')">
+        <i class="fas fa-building"></i> PMO Governance
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="project" class="tab-content" style="display:block;">
+      <iframe src="posts/project-management.html" frameborder="0" class="article-frame"></iframe>
+    </div>
+    <div id="product" class="tab-content">
+      <iframe src="posts/product-management.html" frameborder="0" class="article-frame"></iframe>
+    </div>
+    <div id="pmo" class="tab-content">
+      <iframe src="posts/pmo-governance.html" frameborder="0" class="article-frame"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 All About PM</p>
+  </footer>
+
+  <script>
+    function openTab(evt, tabName) {
+      let i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</html>
+
