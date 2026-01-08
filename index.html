@@ -2,87 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All About PM</title>
   <link rel="stylesheet" href="assets/style.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome 6 Free -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papfN8lv1h5Yw6vE1g3z+P5q4JY9F02Wdrfa+yx4rVd1kHlIlKzZ9g+PsKuM4Qef6H7aUEp0rXkrYh5Tj4A9Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 <body>
-  <header>
-    <h1>All About PM</h1>
-    <nav>
-      <a href="#home" class="tab-link active" onclick="openTab(event, 'home')">
-        <i class="fas fa-home"></i> Home
-      </a>
-      <a href="#about" class="tab-link" onclick="openTab(event, 'about')">
-        <i class="fas fa-user"></i> About
-      </a>
-      <a href="#project" class="tab-link" onclick="openTab(event, 'project')">
-        <i class="fas fa-tasks"></i> Project Management
-      </a>
-      <a href="#product" class="tab-link" onclick="openTab(event, 'product')">
-        <i class="fas fa-box-open"></i> Product Management
-      </a>
-      <a href="#pmo" class="tab-link" onclick="openTab(event, 'pmo')">
-        <i class="fas fa-building"></i> PMO Governance
-      </a>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Home Tab -->
-    <div id="home" class="tab-content" style="display:block;">
-      <h2>Welcome to All About PM</h2>
-      <p>This is your go-to resource for Project Management, Product Management, and PMO Governance. Explore tabs to read articles, learn best practices, and get professional insights.</p>
-      <p>Stay tuned for new posts and tips for managing projects and products effectively!</p>
+<header>
+  <div class="logo">All About PM</div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Articles ▾</button>
+      <div class="dropdown-content">
+        <a href="posts/project-management.html">Project Management</a>
+        <a href="posts/product-management.html">Product Management</a>
+        <a href="posts/pmo-governance.html">PMO Governance</a>
+      </div>
     </div>
 
-    <!-- About Tab -->
-    <div id="about" class="tab-content">
-      <iframe src="posts/about.html" frameborder="0" class="article-frame"></iframe>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Practical Insights for Project, Product & PMO Leaders</h1>
+    <p>
+      A professional knowledge hub focused on delivery excellence,
+      governance, and real-world execution.
+    </p>
+  </section>
+
+  <section class="highlights">
+    <div class="card">
+      <h3>Project Management</h3>
+      <p>Execution strategies, risk control, delivery frameworks.</p>
     </div>
-
-    <!-- Project Management -->
-    <div id="project" class="tab-content">
-      <iframe src="posts/project-management.html" frameborder="0" class="article-frame"></iframe>
+    <div class="card">
+      <h3>Product Management</h3>
+      <p>Roadmaps, prioritisation, stakeholder alignment.</p>
     </div>
-
-    <!-- Product Management -->
-    <div id="product" class="tab-content">
-      <iframe src="posts/product-management.html" frameborder="0" class="article-frame"></iframe>
+    <div class="card">
+      <h3>PMO Governance</h3>
+      <p>Standards, metrics, reporting, decision support.</p>
     </div>
+  </section>
+</main>
 
-    <!-- PMO Governance -->
-    <div id="pmo" class="tab-content">
-      <iframe src="posts/pmo-governance.html" frameborder="0" class="article-frame"></iframe>
-    </div>
-  </main>
+<footer>
+  © 2026 All About PM
+</footer>
 
-  <footer>
-    <p>&copy; 2026 All About PM</p>
-  </footer>
-
-  <script>
-    function openTab(evt, tabName) {
-      let i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tab-content");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tab-link");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-  </script>
 </body>
 </html>
-
